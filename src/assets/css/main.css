@@ -1,5 +1,5 @@
 .bgImg {
-    background-image: url("../images/LoginBgImg.png");
+    background-image: url("../images/purple.jpg");
     background-size: cover;
     object-fit: cover;
     background-repeat: no-repeat;
@@ -7,19 +7,11 @@
     height: calc(100vh);
     width: 100%;
   }
-  .button {
-    background-color: lightblue;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
-    transition: 0.3s ease-in-out;
-  }
+  
   
   .button:hover {
-    background-color: lightblue; /* Keep the background color on hover */
+    background-color: white !important; /* Keep the background color on hover */
     color: white; /* Keep the text white on hover */
-    box-shadow: 0 0 10px 2px cyan; /* Neon shadow effect */
+    box-shadow: 0 0 20px 6px rgb(211, 126, 250); /* Neon shadow effect */
   }
   
