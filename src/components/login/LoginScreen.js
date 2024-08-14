@@ -5,6 +5,7 @@ import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import Modal from "@mui/material/Modal";
 import TextField from "@mui/material/TextField";
+import Checkbox from '@mui/material/Checkbox';
 const style = {
   position: "absolute",
   top: "50%",
@@ -17,6 +18,7 @@ const style = {
   boxShadow: 24,
   p: 4,
 };
+const label = { inputProps: { 'aria-label': 'Checkbox demo' } };
 
 export const LoginScreen = () => {
   const [open, setOpen] = React.useState(false);
@@ -67,22 +69,42 @@ export const LoginScreen = () => {
                   Sign In
                 </Typography>
                 <div className=" mt-10 flex flex-col items-center">
-                  
+                  <TextField
+                    className=" mt-10 w-80 "
+                    id="standard-basic"
+                    placeholder="Enter Email"
+                    variant="standard"
+                  />
 
-                    <TextField className="ml-10 mt-10 "
-                      id="standard-basic"
-                      placeholder="Enter Email"
-                      variant="standard"
-                    />
-                    
-                    <TextField className="ml-10  mt-20"
-                      id="standard-basic"
-                      placeholder="Enter Passward"
-                      variant="standard"
-                    />
-                  
-
-                  
+                  <TextField
+                    className="  mt-20 w-80"
+                    id="standard-basic"
+                    placeholder="Enter Passward"
+                    variant="standard"
+                  />
+                </div>
+                <div className="flex flex-row mt-10 ">
+                <Checkbox className="mt-3 ml-10" {...label} />
+                  <Typography
+                    className="mt-5 w-2/4 justify-start  "
+                    style={{ color: "#4D115C" }}
+                  >
+                    Remember me
+                  </Typography>
+                  <Typography
+                    className="mt-5  w-2/4 flex justify-end mr-10"
+                    style={{ color: "#4D115C" }}
+                  >
+                    Forgot Password?
+                  </Typography>
+                </div>
+                <div className="flex justify-center">
+                  <Button
+                    className=" w-80 text-white mt-20"
+                    style={{ background: "#4D115C" }}
+                  >
+                    Sign In
+                  </Button>
                 </div>
               </div>
             </Box>
