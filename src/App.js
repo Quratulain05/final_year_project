@@ -1,7 +1,7 @@
 import { ThemeProvider, createTheme } from "@mui/material";
 import { RouterProvider } from "react-router-dom";
 import router from "./routes/router";
-import './App.css';
+import '../src/assets/css/style.css';
 const theme = createTheme({
   palette: {
     orange: {

@@ -10,7 +10,8 @@ const style = {
   top: '50%',
   left: '50%',
   transform: 'translate(-50%, -50%)',
-  width: 400,
+  width: 600,
+  height:600,
   bgcolor: 'background.paper',
   border: '2px solid #000',
   boxShadow: 24,
@@ -24,26 +25,33 @@ export const LoginScreen
   const handleClose = () => setOpen(false);
   
   return (
-    <div className='BgImg '>
-    {/* <img class src={loginBg} className='object-fill'/> */}
-    <div>
-      <Button onClick={handleOpen}>Open modal</Button>
+  <div>
+    <div className="bgImg z-0 w-auto  " >
+    <div className="h-1/2 pt-20 justify-center items-center">
+    <Typography className="text-center text-white  " style={{fontSize:50, fontWeight:"bolder", fontFamily:"Monserrat"}}> Welcome To PSL Translator</Typography>
+    </div>
+    <div className="flex justify-center items-center ">
+      <Button className="button" sx={{background:"lightblue"}} onClick={handleOpen}>
+        <Typography className="text-black" style={{ fontWeight:"bolder"}}>
+          Lets Get Started
+        </Typography>
+      </Button>
       <Modal
         open={open}
         onClose={handleClose}
-        aria-labelledby="modal-modal-title"
-        aria-describedby="modal-modal-description"
+        
       >
         <Box sx={style}>
-          <Typography id="modal-modal-title" variant="h6" component="h2">
-            Text in a modal
-          </Typography>
-          <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-            Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
-          </Typography>
+          <div>
+            
+          </div>
+          
+          
         </Box>
       </Modal>
-    </div> 
     </div>
+
+    </div>
+  </div>
   )
 }
