@@ -1,0 +1,8 @@
+.BgImg {
+    background-image: url("../images/loginBgI.jpg") !;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: calc(100vh - 180px);
+    width: 100%;
+    
+  }
