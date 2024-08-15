@@ -1,8 +1,12 @@
-import React from 'react'
-import { LoginScreen } from '../components/login/LoginScreen'
+import React from "react";
+import { LoginScreen } from "../components/login/LoginScreen";
+
 
 export const LoginPage = () => {
   return (
-    <div><LoginScreen/></div>
-  )
-}
+    <div>
+      <LoginScreen />
+      
+    </div>
+  );
+};

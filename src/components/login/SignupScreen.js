@@ -6,7 +6,6 @@ import Typography from "@mui/material/Typography";
 import Modal from "@mui/material/Modal";
 import TextField from "@mui/material/TextField";
 import Checkbox from '@mui/material/Checkbox';
-import { Link } from "react-router-dom";
 const style = {
   position: "absolute",
   top: "50%",
@@ -21,7 +20,7 @@ const style = {
 };
 const label = { inputProps: { 'aria-label': 'Checkbox demo' } };
 
-export const LoginScreen = () => {
+export const SignupScreen = () => {
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
@@ -69,23 +68,36 @@ export const LoginScreen = () => {
                 >
                   Sign In
                 </Typography>
-                <div className=" mt-10 flex flex-col items-center">
+                <div className="  flex flex-col items-center">
                   <TextField
-                    className=" mt-10 w-80 "
+                    className=" mt-16 w-80 "
                     id="standard-basic"
-                    placeholder="Enter Email"
+                    placeholder="Enter Name"
                     variant="standard"
                   />
 
                   <TextField
-                    className="  mt-20 w-80"
+                    className="  mt-8 w-80"
+                    id="standard-basic"
+                    placeholder="Enter Email"
+                    variant="standard"
+                  />
+                  
+                  <TextField
+                    className="  mt-8 w-80"
                     id="standard-basic"
                     placeholder="Enter Passward"
                     variant="standard"
                   />
+                  <TextField
+                    className="  mt-8 w-80"
+                    id="standard-basic"
+                    placeholder="Confirm Passward"
+                    variant="standard"
+                  />
                 </div>
-                <div className="flex flex-row mt-10 ">
-                  <Checkbox className="mt-3 ml-10" {...label} />
+                {/* <div className="flex flex-row mt-10 ">
+                <Checkbox className="mt-3 ml-10" {...label} />
                   <Typography
                     className="mt-5 w-2/4 justify-start  "
                     style={{ color: "#4D115C" }}
@@ -98,29 +110,14 @@ export const LoginScreen = () => {
                   >
                     Forgot Password?
                   </Typography>
-                </div>
-                <div className="flex justify-end mr-10 flex-row">
-                  <Typography
-                    className="text-gray-700"
-                    style={{ fontSize: 14 }}
-                  >
-                    Don't have account?
-                  </Typography>
-                  <Link to="/signup">
-                    <Typography
-                      className="text-blue-700 ml-2"
-                      style={{ fontSize: 14, fontWeight: "bolder" }}
-                    >
-                      SignUp
-                    </Typography>
-                  </Link>
-                </div>
+                </div> */}
+                
                 <div className="flex justify-center">
                   <Button
                     className=" w-80 text-white mt-20"
                     style={{ background: "#4D115C" }}
                   >
-                    Sign In
+                    Create Account
                   </Button>
                 </div>
               </div>
