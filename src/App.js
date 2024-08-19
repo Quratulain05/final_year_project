@@ -1,5 +1,5 @@
 import { ThemeProvider, createTheme } from "@mui/material";
-import { RouterProvider } from "react-router-dom";
+import { Route, Router, RouterProvider, Routes } from "react-router-dom";
 import router from "./routes/router";
 import '../src/assets/css/style.css';
 const theme = createTheme({
@@ -36,10 +36,17 @@ const theme = createTheme({
   },
 });
 function App() {
-  return (
+  return (<>
     <ThemeProvider theme={theme}>
     <RouterProvider router={router} />
   </ThemeProvider>
+  <Router>
+      <Routes>
+        <Route path="/" element={<LoginScreen />} />
+        <Route path="/signup" element={<SignUpPage />} />
+      </Routes>
+    </Router>
+  </>
   );
 }
 

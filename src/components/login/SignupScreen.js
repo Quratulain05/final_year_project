@@ -21,110 +21,65 @@ const style = {
 const label = { inputProps: { 'aria-label': 'Checkbox demo' } };
 
 export const SignupScreen = () => {
-  const [open, setOpen] = React.useState(false);
-  const handleOpen = () => setOpen(true);
+  const [open, setOpen] = React.useState(true); // Modal should open by default
+
   const handleClose = () => setOpen(false);
 
+  React.useEffect(() => {
+    setOpen(true); // Open modal when component mounts
+  }, []);
+
   return (
-    <div>
-      <div className="bgImg z-0 w-auto  ">
-        <div className="h-1/2 pt-20 justify-center items-center">
+    <Modal open={open} onClose={handleClose}>
+      <Box sx={style} className="rounded-3xl">
+        <div>
           <Typography
-            className="text-center text-white  "
+            className="text-center"
             style={{
-              fontSize: 50,
-              fontWeight: "bolder",
+              color: "#4D115C",
               fontFamily: "Montserrat",
+              fontSize: 40,
+              fontWeight: "bolder",
             }}
           >
-            {" "}
-            Welcome To PSL Translator
+            Sign Up
           </Typography>
-        </div>
-        <div className="flex justify-center items-center ">
-          <Button
-            className="button w-60"
-            sx={{ background: "white" }}
-            onClick={handleOpen}
-          >
-            <Typography
-              className="text-black"
-              style={{ fontWeight: "bolder", fontFamily: "Montserrat" }}
+          <div className="flex flex-col items-center">
+            <TextField
+              className="mt-16 w-80"
+              id="standard-basic"
+              placeholder="Enter Name"
+              variant="standard"
+            />
+            <TextField
+              className="mt-8 w-80"
+              id="standard-basic"
+              placeholder="Enter Email"
+              variant="standard"
+            />
+            <TextField
+              className="mt-8 w-80"
+              id="standard-basic"
+              placeholder="Enter Password"
+              variant="standard"
+            />
+            <TextField
+              className="mt-8 w-80"
+              id="standard-basic"
+              placeholder="Confirm Password"
+              variant="standard"
+            />
+          </div>
+          <div className="flex justify-center">
+            <Button
+              className="w-80 text-white mt-20"
+              style={{ background: "#4D115C" }}
             >
-              Lets Get Started
-            </Typography>
-          </Button>
-          <Modal open={open} onClose={handleClose}>
-            <Box sx={style} className="rounded-3xl">
-              <div>
-                <Typography
-                  className=" text-center "
-                  style={{
-                    color: "#4D115C",
-                    fontFamily: "Montserrat",
-                    fontSize: 40,
-                    fontWeight: "bolder",
-                  }}
-                >
-                  Sign In
-                </Typography>
-                <div className="  flex flex-col items-center">
-                  <TextField
-                    className=" mt-16 w-80 "
-                    id="standard-basic"
-                    placeholder="Enter Name"
-                    variant="standard"
-                  />
-
-                  <TextField
-                    className="  mt-8 w-80"
-                    id="standard-basic"
-                    placeholder="Enter Email"
-                    variant="standard"
-                  />
-                  
-                  <TextField
-                    className="  mt-8 w-80"
-                    id="standard-basic"
-                    placeholder="Enter Passward"
-                    variant="standard"
-                  />
-                  <TextField
-                    className="  mt-8 w-80"
-                    id="standard-basic"
-                    placeholder="Confirm Passward"
-                    variant="standard"
-                  />
-                </div>
-                {/* <div className="flex flex-row mt-10 ">
-                <Checkbox className="mt-3 ml-10" {...label} />
-                  <Typography
-                    className="mt-5 w-2/4 justify-start  "
-                    style={{ color: "#4D115C" }}
-                  >
-                    Remember me
-                  </Typography>
-                  <Typography
-                    className="mt-5  w-2/4 flex justify-end mr-10"
-                    style={{ color: "#4D115C" }}
-                  >
-                    Forgot Password?
-                  </Typography>
-                </div> */}
-                
-                <div className="flex justify-center">
-                  <Button
-                    className=" w-80 text-white mt-20"
-                    style={{ background: "#4D115C" }}
-                  >
-                    Create Account
-                  </Button>
-                </div>
-              </div>
-            </Box>
-          </Modal>
+              Create Account
+            </Button>
+          </div>
         </div>
-      </div>
-    </div>
+      </Box>
+    </Modal>
   );
 };
