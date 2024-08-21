@@ -30,6 +30,7 @@ export const SignupScreen = () => {
   }, []);
 
   return (
+    <div className="bgImg z-0 w-auto  ">
     <Modal open={open} onClose={handleClose}>
       <Box sx={style} className="rounded-3xl">
         <div>
@@ -81,5 +82,6 @@ export const SignupScreen = () => {
         </div>
       </Box>
     </Modal>
+    </div>
   );
 };

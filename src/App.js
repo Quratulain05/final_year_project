@@ -40,12 +40,7 @@ function App() {
     <ThemeProvider theme={theme}>
     <RouterProvider router={router} />
   </ThemeProvider>
-  <Router>
-      <Routes>
-        <Route path="/" element={<LoginScreen />} />
-        <Route path="/signup" element={<SignUpPage />} />
-      </Routes>
-    </Router>
+  
   </>
   );
 }

@@ -7,7 +7,11 @@ import Modal from "@mui/material/Modal";
 import TextField from "@mui/material/TextField";
 import Checkbox from '@mui/material/Checkbox';
 import { Link } from "react-router-dom";
+import AccountCircleTwoToneIcon from '@mui/icons-material/AccountCircleTwoTone';
+import MailOutlineTwoToneIcon from '@mui/icons-material/MailOutlineTwoTone';
+import KeyTwoToneIcon from '@mui/icons-material/KeyTwoTone';
 const style = {
+
   position: "absolute",
   top: "50%",
   left: "50%",
@@ -67,22 +71,27 @@ export const LoginScreen = () => {
                     fontWeight: "bolder",
                   }}
                 >
-                  Sign In
+                  Welcome
                 </Typography>
                 <div className=" mt-10 flex flex-col items-center">
-                  <TextField
-                    className=" mt-10 w-80 "
-                    id="standard-basic"
-                    placeholder="Enter Email"
-                    variant="standard"
-                  />
-
-                  <TextField
-                    className="  mt-20 w-80"
-                    id="standard-basic"
-                    placeholder="Enter Passward"
-                    variant="standard"
-                  />
+                  <div className="flex flex-row">
+                    <MailOutlineTwoToneIcon className="mt-12 mr-3" />
+                    <TextField
+                      className=" mt-10 w-80 "
+                      id="standard-basic"
+                      placeholder="Enter Email"
+                      variant="standard"
+                    />
+                  </div>
+                  <div className="flex flex-row">
+                    <KeyTwoToneIcon className=" mt-20 mr-3"/>
+                    <TextField
+                      className="  mt-20 w-80"
+                      id="standard-basic"
+                      placeholder="Enter Passward"
+                      variant="standard"
+                    />
+                  </div>
                 </div>
                 <div className="flex flex-row mt-10 ">
                   <Checkbox className="mt-3 ml-10" {...label} />
