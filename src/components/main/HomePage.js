@@ -49,7 +49,7 @@ export const HomePage = () => {
       </div>
       <img
         src={doct}
-        className="bg-white bounce-animation   rounded-full "
+        className="bg-white bounce-animation  rounded-full "
         style={{ flex: 4, height: "350px" }}
       />
       <Modal open={open} onClose={handleClose}>
